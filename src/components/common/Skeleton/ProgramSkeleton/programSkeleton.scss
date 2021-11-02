@@ -1,0 +1,16 @@
+.program-skeleton-wrapper {
+  display: flex;
+
+  .program-skeleton-image {
+    margin-right: 100px;
+  }
+
+  .program-skeleton-text {
+    .title {
+      margin-bottom: 30px;
+    }
+    .subtitle {
+      margin-bottom: 40px;
+    }
+  }
+}

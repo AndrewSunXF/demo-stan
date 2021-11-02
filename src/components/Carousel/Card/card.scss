@@ -1,0 +1,18 @@
+.card-container {
+  max-width: 280px;
+  padding: 5px;
+  margin: 0 5px;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 190px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.card-active {
+  border: 5px solid #0099fc;
+  border-radius: 4px;
+}
