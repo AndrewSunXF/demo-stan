@@ -37,11 +37,11 @@ A quick look at the top-level files and directories.
 
 - The goal is going to build a React single page application which contains two types of pages, the Home page and the Program page which are saved in the pages folder. The Program page will be linked to the Home page by program id, so I decided to use React-router to handle the page navigation through matching params.
 
-The component folder will contain the React functional components for the pages folder to use. Each component has its own sass file for styling.
+- The component folder will contain the React functional components for the pages folder to use. Each component has its own sass file for styling.
 
-In terms of the data fetching, the given data.json is read by Fetch API in the useEffect hook, and in order to make the data available after build, the data.json file is also configured to be in the dist folder.
+- In terms of the data fetching, the given data.json is read by Fetch API in the useEffect hook, and in order to make the data available after build, the data.json file is also configured to be in the dist folder.
 
-When it comes to the state management, I chose Redux since both Home page and Program page need the same data source. The error state(for error message) and loading state(for skeleton) can also be managed in the Redux store.
+- When it comes to the state management, I chose Redux since both Home page and Program page need the same data source. The error state(for error message) and loading state(for skeleton) can also be managed in the Redux store.
 
 ## Are there any improvements you could make to your submission?
 
