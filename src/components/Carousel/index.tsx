@@ -31,7 +31,6 @@ const Carousel = () => {
 
   const handleEnterKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Enter") {
-      console.log("/program/", `/program/${link}`);
       history.push(`/program/${link}`);
     }
   };
@@ -47,10 +46,6 @@ const Carousel = () => {
   const isloading = useSelector((state: RootState) => state.loading.isLoading);
 
   const history = useHistory();
-
-  console.log("current", current);
-
-  console.log("programData", programData);
 
   const programDataLength = programData.length;
 
@@ -74,8 +69,6 @@ const Carousel = () => {
 
   let displayedData = calculateDisplayedData(current);
 
-  console.log("displayedData", displayedData);
-
   const isActive = (current: number, index: number) => {
     for (let i = 0; i < groups; i++) {
       if (current >= i * cardsPerPage && current < (i + 1) * cardsPerPage) {
@@ -85,7 +78,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" data-testid="test-carousel">
       {displayedData &&
         displayedData.map((card, index) => (
           <Card

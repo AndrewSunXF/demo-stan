@@ -40,12 +40,9 @@ const ProgramPage = ({ match }: singleProgramProps) => {
     (item) => item.id === +programId
   )[0];
 
-  console.log("programData", programData);
-  console.log("singleProgram", singleProgram);
-
   return (
     <>
-      <div className="program-page-wrapper">
+      <div className="program-page-wrapper" data-testid={"test-program"}>
         {singleProgram && (
           <>
             <div className="program-page-image-wrapper">

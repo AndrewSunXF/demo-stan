@@ -3,13 +3,14 @@ import programReducer from "./programSlice"
 import errorReducer from "./errorSlice"
 import loadingReducer from "./loadingSlice"
 
-export const store = configureStore({
+ const store = configureStore({
   reducer: {
     program: programReducer,
     error: errorReducer,
     loading: loadingReducer
   },
 })
+export default store;
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>

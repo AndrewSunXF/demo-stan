@@ -15,7 +15,9 @@ const Card = ({ id, image, active, setLink }: CarouselCard) => {
   }, [active]);
 
   return (
-    <div className={`card-container ${active && "card-active"}`}>
+    <div
+      className={`card-container ${active ? "card-active" : "card-inactive"}`}
+    >
       <Link to={`/program/${id}`}>
         <img src={image} alt="image lost" />
       </Link>

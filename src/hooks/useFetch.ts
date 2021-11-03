@@ -8,6 +8,7 @@ const useFetch = (url: string) => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(async () => {
+      // const fetchData = async () => {
       try {
         const res = await fetch(url);
         const data = await res.json();
@@ -20,6 +21,9 @@ const useFetch = (url: string) => {
         dispatch(setIsLoading(false));
       }
     }, 3000);
+    // }
+    // fetchData();
+
   }, []);
 };
 
